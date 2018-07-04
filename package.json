@@ -1,0 +1,38 @@
+{
+  "name": "node-uber-cli",
+  "version": "1.0.0",
+  "description": "A command-line client for Uber cabs timee/price estimates.",
+  "main": "build/uber.js",
+  "scripts": {
+    "build": "babel ./src -d ./build ",
+    "start": "npm run build && node ./build/uber.js",
+    "prepublish": "npm run build"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "uber": "build/uber.js"
+  },
+  "keywords": [
+    "uber client",
+    "uber time",
+    "uber price"
+  ],
+  "author": "kmvkrish",
+  "repository": {
+    "url": "https://github.com/kmvkrish/node-uber-cli.git",
+    "type": "git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cli-table3": "^0.5.0",
+    "commander": "^2.16.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
